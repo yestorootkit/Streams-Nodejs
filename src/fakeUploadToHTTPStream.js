@@ -22,4 +22,8 @@ fetch('http://localhost:8000', {
   method: 'POST',
   body: new OneToHundredStream(),
   duplex: 'half',
+}).then(response => {
+  return response.text();
+}).then(data => {
+  console.log(data);
 })
